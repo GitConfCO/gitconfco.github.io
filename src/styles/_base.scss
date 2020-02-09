@@ -18,13 +18,3 @@ ul {
 li {
   list-style-type: none;
 }
-
-// TODO: Create button component
-.btn {
-  @extend %gc-cta;
-
-  background: $bunting;
-  border: $corn solid 2px;
-  color: $almond;
-  padding: 14px 16px;
-}
