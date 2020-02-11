@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0be314"],{"2ee0":function(e,t,n){"use strict";n.r(t);var r=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("h1",[e._v(" "+e._s(e.title)+" ")])])},u=[],a={data:function(){return{title:"Patrocinadores"}}},c=a,i=n("2877"),l=Object(i["a"])(c,r,u,!1,null,null,null);t["default"]=l.exports}}]);
-//# sourceMappingURL=chunk-2d0be314.b4581b65.js.map
