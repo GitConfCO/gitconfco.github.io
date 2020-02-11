@@ -1,0 +1,65 @@
+%gc-body1 {
+  color: $almond;
+  font: 300 18px/24px $roboto-mono;
+}
+
+%gc-body2 {
+  color: $almond;
+  font: 300 16px/22px $roboto-mono;
+}
+
+%gc-cta {
+  color: $almond;
+  font: 700 24px/28px $roboto;
+  letter-spacing: 0.6px;
+}
+
+// TODO: confirm the font sizes across viewports
+%gc-home-hero {
+  @include gc-double-text($corn, 15px);
+
+  color: $corn;
+  font: 700 70px $roboto;
+  letter-spacing: 4px;
+
+  @include from('md') {
+    @include gc-double-text($corn, 30px);
+
+    font-size: 120px;
+    letter-spacing: 5px;
+  }
+
+  @include from('lg') {
+    @include gc-double-text($corn, 40px);
+
+    font-size: 160px;
+    letter-spacing: 6.4px;
+  }
+}
+
+%gc-paragraph-title {
+  color: $almond;
+  font: 700 24px/29px $roboto-mono;
+}
+
+%gc-section-title {
+  @include gc-double-text($corn, 10px);
+
+  color: $corn;
+  font: 700 60px $roboto;
+  letter-spacing: 2px;
+
+  @include from('md') {
+    @include gc-double-text($corn, 20px);
+
+    font-size: 80px;
+    letter-spacing: 2.2px;
+  }
+
+  @include from('lg') {
+    @include gc-double-text($corn, 30px);
+
+    font-size: 100px;
+    letter-spacing: 2.4px;
+  }
+}
