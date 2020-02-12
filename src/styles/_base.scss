@@ -2,12 +2,26 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
 
-a {
-  text-decoration: none;
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style-type: none;
 }
 
 ul {
@@ -15,6 +29,4 @@ ul {
   padding: 0;
 }
 
-li {
-  list-style-type: none;
-}
+
