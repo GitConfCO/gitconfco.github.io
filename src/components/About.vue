@@ -59,7 +59,7 @@ export default {
   &__title {
     @extend %gc-paragraph-title;
 
-    margin-bottom: 16px;
+    margin: 0 0 16px;
   }
 
   &__body {
