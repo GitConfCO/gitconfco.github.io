@@ -1,11 +1,13 @@
 <template>
   <section class="container">
     <div class="about">
-      <div class="about__image">
-        <div class="about__image--back">
-        </div>
-        <div class="about__image--front">
-        </div>
+      <div class="about__media">
+        <img class="about__image--back"
+              src="../assets/images/pictures/about-fpo-back.jpeg"
+              alt="Terminal">
+        <img class="about__image--front"
+              src="../assets/images/pictures/about-fpo.jpeg"
+              alt="Git">
       </div>
       <div class="about__content">
         <h2 class="about__title">{{ title }}</h2>
@@ -21,7 +23,7 @@ export default {
   data() {
     return {
       title: 'About',
-      content: 'GitConf es la primer conferencia sobre Git a realizarse en América Latina, dedicaremos un día entero a aprender sobre Git, GitHub, CI, CD y automatización acompañados de speakers nacionales e internacionales.',
+      content: 'GitConf is the first Git conference ever in Latin America, an entire day dedicated to learning and sharing Git, GitHub, CI, CD and automation. We will be joined by national and international speakers.',
     };
   },
 };
@@ -66,9 +68,10 @@ export default {
     @extend %gc-body2;
   }
 
-  &__image {
+  &__media {
     display: none;
     position: relative;
+    width: 100%;
 
     @include from('md') {
       display: inline-block;
@@ -78,12 +81,15 @@ export default {
     @include from('lg') {
       width: 50%;
     }
+  }
 
+  &__image {
     &--front,
     &--back {
-      background-color: green;
+      background-color: $ebony;
       border: 1px solid $corn;
       height: 160px;
+      object-fit: cover;
       width: 100%;
 
       @include from('lg') {

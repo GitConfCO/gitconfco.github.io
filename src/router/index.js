@@ -16,19 +16,24 @@ const routes = [
     component: () => import('../views/Speakers.vue'),
   },
   {
-    path: '/agenda',
-    name: 'agenda',
+    path: '/schedule',
+    name: 'schedule',
     component: () => import('../views/Schedule.vue'),
   },
   {
-    path: '/equipo',
-    name: 'equipo',
+    path: '/team',
+    name: 'team',
     component: () => import('../views/Team.vue'),
   },
   {
-    path: '/patrocinadores',
-    name: 'patrocinadores',
+    path: '/sponsors',
+    name: 'sponsors',
     component: () => import('../views/Sponsors.vue'),
+  },
+  {
+    path: '/coming-soon',
+    name: 'coming-soon',
+    component: () => import('../views/NotFound.vue'),
   },
 ];
 

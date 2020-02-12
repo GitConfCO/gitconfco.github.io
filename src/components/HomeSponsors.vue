@@ -1,5 +1,5 @@
 <template>
-  <section class="home-sponsors">
+  <section id="home-sponsors" class="home-sponsors">
     <div class="container">
       <h1>
         <span class="sr-only">Conf sponsors</span>
