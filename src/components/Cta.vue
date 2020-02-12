@@ -1,7 +1,7 @@
 <template>
   <a :href="url" class="cta">
     {{ text }}
-    <i :class="iconClass"></i>
+    <i :class="`fa fa-${this.icon} cta__icon`"></i>
   </a>
 </template>
 
@@ -20,11 +20,6 @@ export default {
     icon: {
       type: String,
       required: true,
-    },
-  },
-  computed: {
-    iconClass() {
-      return `fa fa-${this.icon} cta__icon`;
     },
   },
 };

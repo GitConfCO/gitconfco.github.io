@@ -63,3 +63,24 @@
     letter-spacing: 2.4px;
   }
 }
+
+%gc-subsection-title {
+  @include gc-double-text($corn, 6px);
+
+  color: $corn;
+  font: 700 35px $roboto;
+  letter-spacing: 0.5px;
+
+  @include from('md') {
+    @include gc-double-text($corn, 8px);
+
+    font-size: 40px;
+  }
+
+  @include from('lg') {
+    @include gc-double-text($corn, 10px);
+
+    font-size: 42px;
+    letter-spacing: 1px;
+  }
+}
