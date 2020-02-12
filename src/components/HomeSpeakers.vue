@@ -68,7 +68,7 @@ export default {
   methods: {
     getImage(name) {
       // eslint-disable-next-line global-require, import/no-dynamic-require
-      return require(`../assets/speakers/${name}`);
+      return require(`../assets/images/speakers/${name}`);
     },
   },
 };
@@ -80,6 +80,16 @@ export default {
 @import '../styles/typography';
 
 .home-speakers {
+  margin-bottom: 60px;
+
+  @include from('md') {
+    margin-bottom: 80px;
+  }
+
+  @include from('lg') {
+    margin-bottom: 100px;
+  }
+
   &__content {
     text-align: center;
 
