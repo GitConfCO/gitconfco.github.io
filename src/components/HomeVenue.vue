@@ -3,7 +3,7 @@
     <div class="container">
       <div class="home-venue__content">
         <div class="home-venue__title-container">
-          <h1 class="home-venue__title" data-heading="Lugar">Lugar</h1>
+          <h1 class="home-venue__title" data-heading="Venue">Venue</h1>
         </div>
         <div class="home-venue__details">
           <h2 class="home-venue__name">{{ name }}</h2>
@@ -21,7 +21,7 @@ export default {
   data() {
     return {
       name: 'Ruta N',
-      description: 'Ruta N es el centro de innovación y negocios de Medellín, una corporación creada por la alcaldía de Medellín, UNE y EPM para promover el desarrollo de negocios innovadores basados en tecnología, que incrementen la competitividad de la ciudad y de la región.',
+      description: "Medellin's own business and innovation center. A strategic location close to Metro.",
       address: 'Complejo Ruta N, Calle 67 N° 52-20, Medellín - Colombia.',
     };
   },

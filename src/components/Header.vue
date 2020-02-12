@@ -19,6 +19,7 @@
         <a v-for="item in navigation"
             :key="item.title"
             :href="item.url"
+            v-on:click="checkUrl(item)"
             class="header__navigation-item">{{ item.title }}</a>
       </div>
     </div>
@@ -38,19 +39,19 @@ export default {
         },
         {
           title: 'Speakers',
-          url: '/speakers/',
+          url: '/coming-soon/',
         },
         {
           title: 'Team',
-          url: '/team/',
+          url: '/coming-soon/',
         },
         {
           title: 'Schedule',
-          url: '/schedule/',
+          url: '/coming-soon/',
         },
         {
           title: 'Sponsors',
-          url: '/sponsors/',
+          url: '/#home-sponsors',
         },
       ],
     };
@@ -58,11 +59,17 @@ export default {
   methods: {
     toggleNav() {
       this.visibleNav = !this.visibleNav;
+      window.scrollTo(0, 0);
 
       if (this.visibleNav) {
         document.documentElement.style.overflow = 'hidden';
       } else {
         document.documentElement.style.overflow = 'auto';
+      }
+    },
+    checkUrl(item) {
+      if (item.url.startsWith('/#')) {
+        this.toggleNav();
       }
     },
   },

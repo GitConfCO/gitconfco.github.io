@@ -15,9 +15,9 @@
         <div class="home-hero__info">
           <ul class="home-hero__details">
             <li class="home-hero__name">{{ conferenceName }}</li>
-            <li class="home-hero__date">Fecha: {{ date }}</li>
-            <li class="home-hero__time">Hora: {{ time }}</li>
-            <li class="home-hero__venue">Lugar: {{ venue }}</li>
+            <li class="home-hero__date">Date: {{ date }}</li>
+            <li class="home-hero__time">Time: {{ time }}</li>
+            <li class="home-hero__venue">Venue: {{ venue }}</li>
           </ul>
           <Cta :text="'Buy tickets'" :url="'#'" :icon="'level-up-alt'" />
         </div>

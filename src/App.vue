@@ -21,7 +21,7 @@ export default {
 <style lang="scss">
 @import 'styles/variables';
 
-#app {
+body {
   background-color: $ebony;
   position: relative;
   z-index: 0;
