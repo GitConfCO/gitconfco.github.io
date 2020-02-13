@@ -19,7 +19,8 @@
             <li class="home-hero__time">Time: {{ time }}</li>
             <li class="home-hero__venue">Venue: {{ venue }}</li>
           </ul>
-          <Cta :text="'Buy tickets'" :url="'#'" :icon="'level-up-alt'" />
+          <!-- TODO: Uncomment after adding tito -->
+          <!-- <Cta :text="'Buy tickets'" :url="'#'" :icon="'level-up-alt'" /> -->
         </div>
       </div>
     </div>
@@ -27,7 +28,8 @@
 </template>
 
 <script>
-import Cta from '@/components/Cta.vue';
+// TODO: Uncomment after adding tito
+// import Cta from '@/components/Cta.vue';
 
 import WOW from 'wow.js/dist/wow.min';
 
@@ -42,7 +44,8 @@ export default {
     };
   },
   components: {
-    Cta,
+    // TODO: Uncomment after adding tito
+    // Cta,
   },
   mounted() {
     new WOW().init();

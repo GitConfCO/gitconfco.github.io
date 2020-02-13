@@ -67,7 +67,7 @@ export default {
         }],
       }, {
         id: 'community',
-        title: '/Community_Partners',
+        title: '/Community _Partners',
         sponsors: [{
           name: 'Pioneras Dev',
           image: 'pioneras.png',

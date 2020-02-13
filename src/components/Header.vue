@@ -86,6 +86,7 @@ export default {
 
   height: 140px;
   transition: height .5s ease, background-color .2s ease;
+  padding-top: 15px;
 
   @include from('md') {
     padding-top: 35px;
@@ -93,7 +94,11 @@ export default {
 
   >.container,
   &__image {
-    height: 140px;
+    height: 100px;
+
+    @include from('md') {
+      height: 140px;
+    }
   }
 
   &__content {
@@ -102,10 +107,14 @@ export default {
     color: $corn;
     display: flex;
     flex-grow: 1;
-    height: 70px;
+    height: 50px;
     justify-content: space-between;
     margin-left: 25px;
     transition: all .5s ease;
+
+    @include from('md') {
+      height: 70px;
+    }
 
     #{$this}__menu {
       cursor: pointer;
@@ -131,9 +140,16 @@ export default {
 
   &__navigation {
     display: none;
+    height: calc(100vh - 115px);
+    justify-content: center;
+    overflow-y: scroll;
     top: 0;
     transition: all .5s ease;
     z-index: 80;
+
+    @include from('md') {
+      height: calc(100vh - 175px);
+    }
 
     &-wrapper {
       display: flex;
@@ -147,10 +163,22 @@ export default {
 
       color: $ebony;
       display: block;
-      font-size: 60px;
-      line-height: 60px;
-      margin: 30px 0;
+      font-size: 40px;
+      line-height: 40px;
+      margin: 20px 0;
       text-align: right;
+
+      @include from('md') {
+        font-size: 50px;
+        line-height: 50px;
+        margin: 25px 0;
+      }
+
+      @include from('lg') {
+        font-size: 60px;
+        line-height: 60px;
+        margin: 30px 0;
+      }
 
       &:hover {
         text-decoration: underline;

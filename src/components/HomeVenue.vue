@@ -44,7 +44,8 @@ export default {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 85px;
+  padding-bottom: 85px;
+  padding-top: 85px;
   position: relative;
   z-index: 0;
 
@@ -52,6 +53,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 20px 20px 0;
 
     @include from('lg') {
       flex-direction: row;
@@ -66,7 +68,11 @@ export default {
     @include gc-double-box($corn, $ebony, 20px);
 
     flex: 1;
-    padding: 38px 53px;
+    padding: 25px;
+
+    @include from('md') {
+      padding: 40px;
+    }
   }
 
   &__name {
@@ -79,6 +85,11 @@ export default {
 
   &__title-container {
     flex: 1;
+    margin-bottom: 56px;
+
+    @include from('lg') {
+      margin-bottom: 0;
+    }
   }
 }
 </style>

@@ -49,11 +49,12 @@ export default {
   &__content {
     @include gc-double-box($corn, $ebony, 20px);
 
-    padding: 38px 53px;
+    padding: 25px;
 
     @include from('md') {
       display: inline-block;
       margin-left: 100px;
+      padding: 40px;
       width: 70%;
     }
 
