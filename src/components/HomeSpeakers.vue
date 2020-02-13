@@ -2,7 +2,7 @@
   <div class="home-speakers">
     <div class="container">
       <div class="home-speakers__content">
-        <h1 class="home-speakers__heading">
+        <h1 class="home-speakers__heading wow fadeIn">
           <span class="sr-only">Confirmed speakers</span>
           <span class="home-speakers__title"
                 data-heading="Confirmed"
@@ -12,7 +12,9 @@
                 data-heading="/Speakers"
                 aria-hidden="true">/Speakers</span>
         </h1>
-        <div v-for="item in speakers" :key="item.name" class="home-speakers__item">
+        <div v-for="item in speakers"
+              :key="item.name"
+              class="home-speakers__item wow fadeIn">
           <img :src="getImage(item.image)" :alt="item.name">
           <Cta :text="item.name" :url="item.url" :icon="'plus-square'" />
         </div>
@@ -23,6 +25,8 @@
 
 <script>
 import Cta from '@/components/Cta.vue';
+
+import WOW from 'wow.js/dist/wow.min';
 
 export default {
   name: 'home-speakers',
@@ -70,6 +74,9 @@ export default {
       // eslint-disable-next-line global-require, import/no-dynamic-require
       return require(`../assets/images/speakers/${name}`);
     },
+  },
+  mounted() {
+    new WOW().init();
   },
 };
 </script>

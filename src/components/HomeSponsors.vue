@@ -1,7 +1,7 @@
 <template>
   <section id="home-sponsors" class="home-sponsors">
     <div class="container">
-      <h1>
+      <h1 class="wow fadeIn">
         <span class="sr-only">Conf sponsors</span>
         <span class="home-sponsors__title"
               data-heading="Conf"
@@ -16,12 +16,14 @@
           :key="category.id"
           class="home-sponsors__category">
 
-        <h2 aria-hidden="true" class="home-sponsors__category-name" :data-heading="category.title">
+        <h2 aria-hidden="true"
+            class="home-sponsors__category-name wow fadeIn"
+            :data-heading="category.title">
           <span class="sr-only">{{ category.id }}</span>
           {{ category.title }}
         </h2>
 
-        <div :class="`home-sponsors__category-list home-sponsors__category-list--${category.id}`">
+        <div :class="cssClasses(category.id)">
           <a v-for="sponsor in category.sponsors"
             :key="sponsor.name"
             :href="sponsor.url"
@@ -37,6 +39,8 @@
 </template>
 
 <script>
+import WOW from 'wow.js/dist/wow.min';
+
 export default {
   name: 'home-sponsors',
   data() {
@@ -73,10 +77,16 @@ export default {
     };
   },
   methods: {
+    cssClasses(category) {
+      return `home-sponsors__category-list home-sponsors__category-list--${category} wow fadeIn`;
+    },
     getImage(category, image) {
       // eslint-disable-next-line global-require, import/no-dynamic-require
       return require(`../assets/images/sponsors/${category}/${image}`);
     },
+  },
+  mounted() {
+    new WOW().init();
   },
 };
 </script>

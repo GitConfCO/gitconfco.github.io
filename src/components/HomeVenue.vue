@@ -1,7 +1,7 @@
 <template>
   <section class="home-venue">
     <div class="container">
-      <div class="home-venue__content">
+      <div class="home-venue__content wow fadeIn">
         <div class="home-venue__title-container">
           <h1 class="home-venue__title" data-heading="Venue">Venue</h1>
         </div>
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import WOW from 'wow.js/dist/wow.min';
+
 export default {
   name: 'home-venue',
   data() {
@@ -24,6 +26,9 @@ export default {
       description: "Medellin's own business and innovation center. A strategic location close to Metro.",
       address: 'Complejo Ruta N, Calle 67 N° 52-20, Medellín - Colombia.',
     };
+  },
+  mounted() {
+    new WOW().init();
   },
 };
 </script>
@@ -36,6 +41,7 @@ export default {
 .home-venue {
   background: linear-gradient(rgba(#000, 0.6), rgba(#000, 0.6)),
               url('../assets/images/pictures/venue.jpg');
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 85px;
