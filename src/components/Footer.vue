@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <div class="footer__content">
+      <div class="footer__content wow fadeIn">
         <img class="footer__image"
           src="../assets/images/logo/logo-horizontal.svg"
           alt="gitconfco logo">
@@ -13,6 +13,16 @@
     </div>
   </footer>
 </template>
+
+<script>
+import WOW from 'wow.js/dist/wow.min';
+
+export default {
+  mounted() {
+    new WOW().init();
+  },
+};
+</script>
 
 <style lang="scss">
 @import '../styles/variables';

@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import WOW from 'wow.js/dist/wow.min';
+
 export default {
   name: 'about',
   data() {
@@ -25,6 +27,9 @@ export default {
       title: 'About',
       content: 'GitConf is the first Git conference ever in Latin America, an entire day dedicated to learning and sharing Git, GitHub, CI, CD and automation. We will be joined by national and international speakers.',
     };
+  },
+  mounted() {
+    new WOW().init();
   },
 };
 </script>

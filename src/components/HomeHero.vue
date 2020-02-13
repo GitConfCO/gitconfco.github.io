@@ -2,7 +2,7 @@
   <div class="home-hero">
     <div class="container">
       <div class="home-hero__content">
-        <h1>
+        <h1 class="wow fadeIn">
           <span class="sr-only">GitConf CO 2020</span>
           <span class="home-hero__title"
                 data-heading="GitConf"
@@ -12,7 +12,7 @@
                 data-heading="/CO.2020"
                 aria-hidden="true">/CO.2020</span>
         </h1>
-        <div class="home-hero__info">
+        <div class="home-hero__info wow fadeIn">
           <ul class="home-hero__details">
             <li class="home-hero__name">{{ conferenceName }}</li>
             <li class="home-hero__date">Date: {{ date }}</li>
@@ -29,6 +29,8 @@
 <script>
 import Cta from '@/components/Cta.vue';
 
+import WOW from 'wow.js/dist/wow.min';
+
 export default {
   name: 'hero',
   data() {
@@ -41,6 +43,9 @@ export default {
   },
   components: {
     Cta,
+  },
+  mounted() {
+    new WOW().init();
   },
 };
 </script>
