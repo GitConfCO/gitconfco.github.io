@@ -16,11 +16,21 @@
         </div>
       </div>
       <div class="header__navigation">
-        <a v-for="item in navigation"
-            :key="item.title"
-            :href="item.url"
-            v-on:click="checkUrl(item)"
-            class="header__navigation-item">{{ item.title }}</a>
+        <div v-for="item in navigation"
+            :key="item.title">
+            <a v-if="item.type == 'anchor'"
+              :href="item.url"
+              v-on:click="toggleNav()"
+              class="header__navigation-item">
+              {{ item.title }}
+            </a>
+            <router-link v-else
+              :to="item.url"
+              v-on:click.native="toggleNav()"
+              class="header__navigation-item">
+              {{ item.title}}
+            </router-link>
+        </div>
       </div>
     </div>
   </header>
@@ -52,6 +62,7 @@ export default {
         {
           title: 'Sponsors',
           url: '/#home-sponsors',
+          type: 'anchor',
         },
       ],
     };
@@ -65,11 +76,6 @@ export default {
         document.documentElement.style.overflow = 'hidden';
       } else {
         document.documentElement.style.overflow = 'auto';
-      }
-    },
-    checkUrl(item) {
-      if (item.url.startsWith('/#')) {
-        this.toggleNav();
       }
     },
   },
