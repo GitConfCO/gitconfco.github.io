@@ -71,7 +71,11 @@ export default {
         sponsors: [{
           name: 'Pioneras Dev',
           image: 'pioneras.png',
-          url: '#',
+          url: 'http://www.pionerasdev.co',
+        }, {
+          name: 'Angular Medellin',
+          image: 'angularmde.png',
+          url: 'https://www.meetup.com/es-ES/Angular-Medellin/',
         }],
       }],
     };
