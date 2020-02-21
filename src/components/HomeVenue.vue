@@ -44,6 +44,7 @@ export default {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  border-top: 2px solid $corn;
   padding-bottom: 85px;
   padding-top: 85px;
   position: relative;

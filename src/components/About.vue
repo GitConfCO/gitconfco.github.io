@@ -11,7 +11,13 @@
       </div>
       <div class="about__content">
         <h2 class="about__title">{{ title }}</h2>
-        <div class="about__body">{{ content }}</div>
+        <div class="about__body">
+          <p>
+            {{ content }}
+          </p>
+          <span class="about__date">Date: {{ date }}</span><br>
+          <span class="about__venue">City: {{ city }}</span>
+        </div>
       </div>
     </div>
   </section>
@@ -25,7 +31,9 @@ export default {
   data() {
     return {
       title: 'About',
-      content: 'GitConf is the first Git conference ever in Latin America, an entire day dedicated to learning and sharing Git, GitHub, CI, CD and automation. We will be joined by national and international speakers.',
+      content: 'GitConf is the first Git conference ever in Latin America, an entire day dedicated to learning and sharing Git, GitHub, CI, CD and automation.',
+      date: '27/06/2020',
+      city: 'Medellin, Colombia',
     };
   },
   mounted() {
@@ -62,6 +70,10 @@ export default {
       margin-left: 100px;
       width: 50%;
     }
+  }
+
+  &__date {
+    margin-top: 10px;
   }
 
   &__title {

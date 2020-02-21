@@ -3,11 +3,12 @@
 }
 
 a {
+  color: $almond;
   text-decoration: none;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  @extend %gc-body1;
 }
 
 h1,

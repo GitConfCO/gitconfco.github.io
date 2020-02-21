@@ -16,8 +16,7 @@
           <ul class="home-hero__details">
             <li class="home-hero__name">{{ conferenceName }}</li>
             <li class="home-hero__date">Date: {{ date }}</li>
-            <li class="home-hero__time">Time: {{ time }}</li>
-            <li class="home-hero__venue">Venue: {{ venue }}</li>
+            <li class="home-hero__venue">City: {{ city }}</li>
           </ul>
           <!-- TODO: Uncomment after adding tito -->
           <!-- <Cta :text="'Buy tickets'" :url="'#'" :icon="'level-up-alt'" /> -->
@@ -39,8 +38,7 @@ export default {
     return {
       conferenceName: 'GitConf Colombia',
       date: '27/06/2020',
-      time: '09:00 a.m',
-      venue: 'Ruta N',
+      city: 'Medellin',
     };
   },
   components: {
@@ -59,7 +57,11 @@ export default {
 @import '../styles/typography';
 
 .home-hero {
-  padding: 45px 0;
+  padding-bottom: 45px;
+
+  @include from('lg') {
+    padding-bottom: 100px;
+  }
 
   &__content {
     text-align: right;
@@ -70,15 +72,14 @@ export default {
   }
 
   &__details {
-    @extend %gc-body1;
-
     margin-bottom: 32px;
     margin-top: 50px;
     text-align: left;
   }
 
   &__info {
-    display: inline-block;
+    //TODO: Show this section after refactor the component
+    display: none;
   }
 
   &__name {
