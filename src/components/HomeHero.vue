@@ -57,7 +57,7 @@ export default {
 @import '../styles/typography';
 
 .home-hero {
-  padding: 45px 0;
+  padding-bottom: 45px;
 
   @include from('lg') {
     padding-bottom: 100px;

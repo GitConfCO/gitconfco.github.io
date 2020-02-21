@@ -53,7 +53,7 @@ export default {
         },
         {
           title: 'Team',
-          url: '/coming-soon/',
+          url: '/team',
         },
         {
           title: 'Schedule',
@@ -90,7 +90,7 @@ export default {
 .header {
   $this: &;
 
-  height: 140px;
+  margin-bottom: 80px;
   transition: height .5s ease, background-color .2s ease;
   padding-top: 15px;
 
