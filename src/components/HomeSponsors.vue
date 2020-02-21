@@ -12,7 +12,7 @@
               aria-hidden="true">/Sponsors</span>
       </h1>
 
-      <div v-for="category in categories"
+      <div v-for="category in sponsors"
           :key="category.id"
           class="home-sponsors__category">
 
@@ -39,45 +39,15 @@
 </template>
 
 <script>
+import sponsors from '@/assets/data/sponsors';
+
 import WOW from 'wow.js/dist/wow.min';
 
 export default {
   name: 'home-sponsors',
   data() {
     return {
-      categories: [{
-        id: 'platinum',
-        title: '/Platinum',
-        sponsors: [{
-          name: 'GitHub',
-          image: 'gitHub.png',
-          url: 'https://www.github.com',
-        }],
-      }, {
-        id: 'gold',
-        title: '/Gold',
-        sponsors: [{
-          name: 'Huge inc',
-          image: 'huge.jpg',
-          url: 'https://www.hugeinc.com',
-        }, {
-          name: 'Ruta N',
-          image: 'rutaN.png',
-          url: 'https://rutanmedellin.org',
-        }],
-      }, {
-        id: 'community',
-        title: '/Community _Partners',
-        sponsors: [{
-          name: 'Pioneras Dev',
-          image: 'pioneras.png',
-          url: 'http://www.pionerasdev.co',
-        }, {
-          name: 'Angular Medellin',
-          image: 'angularmde.png',
-          url: 'https://www.meetup.com/es-ES/Angular-Medellin/',
-        }],
-      }],
+      sponsors,
     };
   },
   methods: {
