@@ -26,6 +26,10 @@
             <a href="http://www.twitter.com/gitconfco" target="blank"><i aria-hidden="true" class="fab fa-twitter"></i></a>
             <a href="http://www.instagram.com/gitconf_co" target="blank"><i aria-hidden="true" class="fab fa-instagram"></i></a>
           </div>
+          <div class="footer__details-social">
+            <span>Contact us:</span><br>
+            <span>gitconfco@gmail.com</span><br>
+          </div>
         </div>
       </div>
     </div>
@@ -79,8 +83,6 @@ export default {
   }
 
   &__content {
-    @extend %gc-body1;
-
     border-top: $corn solid 2px;
     display: flex;
     flex-direction: column;

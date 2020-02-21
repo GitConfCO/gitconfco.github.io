@@ -8,7 +8,7 @@ a {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  @extend %gc-body1;
 }
 
 h1,
