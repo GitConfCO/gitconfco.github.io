@@ -90,17 +90,19 @@ export default {
 .header {
   $this: &;
 
-  margin-bottom: 80px;
+  height: 90px;
+  margin-bottom: 20px;
   transition: height .5s ease, background-color .2s ease;
-  padding-top: 15px;
+  padding-top: 10px;
 
   @include from('md') {
+    height: 140px;
     padding-top: 35px;
   }
 
   >.container,
   &__image {
-    height: 100px;
+    height: 80px;
 
     @include from('md') {
       height: 140px;

@@ -14,7 +14,7 @@
       <div class="home-cfp__content">
         <p>{{ description }}</p>
         <p>{{ dates }}</p>
-        <Cta :text="ctaText" :url="'#'" :icon="'plus-square'" class="home-cfp__cta"/>
+        <Cta :text="ctaText" :icon="'plus-square'" class="home-cfp__cta"/>
       </div>
     </div>
   </section>
@@ -44,20 +44,20 @@ export default {
 @import '../styles/typography';
 
 .home-cfp {
+  @extend %gc-section-padding;
 
   &__content {
     margin-top: 45px;
   }
 
   &__cta {
-    pointer-events: none;
     cursor: not-allowed;
+    filter: opacity(.5);
     margin: 50px auto 0;
   }
 
   &__title {
     @extend %gc-section-title;
-
   }
 }
 </style>

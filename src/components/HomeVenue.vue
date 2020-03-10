@@ -39,14 +39,14 @@ export default {
 @import '../styles/typography';
 
 .home-venue {
+  @extend %gc-section-padding;
+
   background: linear-gradient(rgba(#000, 0.6), rgba(#000, 0.6)),
               url('../assets/images/pictures/venue.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   border-top: 2px solid $corn;
-  padding-bottom: 85px;
-  padding-top: 85px;
   position: relative;
   z-index: 0;
 

@@ -29,14 +29,16 @@
   @include gc-double-text($corn, 15px);
 
   color: $corn;
-  font: 700 70px $roboto;
+  font: 700 50px $roboto;
   letter-spacing: 4px;
+  line-height: 60px;
 
   @include from('md') {
     @include gc-double-text($corn, 30px);
 
     font-size: 120px;
     letter-spacing: 5px;
+    line-height: 120px;
   }
 
   @include from('lg') {
@@ -44,6 +46,7 @@
 
     font-size: 160px;
     letter-spacing: 6.4px;
+    line-height: 160px;
   }
 }
 
@@ -56,14 +59,16 @@
   @include gc-double-text($corn, 10px);
 
   color: $corn;
-  font: 700 60px $roboto;
+  font: 700 50px $roboto;
   letter-spacing: 2px;
+  line-height: 60px;
 
   @include from('md') {
     @include gc-double-text($corn, 20px);
 
     font-size: 80px;
     letter-spacing: 2.2px;
+    line-height: 80px;
   }
 
   @include from('lg') {
@@ -71,6 +76,7 @@
 
     font-size: 100px;
     letter-spacing: 2.4px;
+    line-height: 100px;
   }
 }
 
@@ -92,5 +98,13 @@
 
     font-size: 42px;
     letter-spacing: 1px;
+  }
+}
+
+%gc-section-padding {
+  padding: 60px 0;
+
+  @include from('md') {
+    padding: 80px 0;
   }
 }

@@ -1,6 +1,6 @@
 <template>
-  <section class="container">
-    <div class="about">
+  <section class="about">
+    <div class="container">
       <div class="about__media">
         <img class="about__image--back"
               src="../assets/images/pictures/about-fpo-back.jpeg"
@@ -15,8 +15,6 @@
           <p>
             {{ content }}
           </p>
-          <span class="about__date">Date: {{ date }}</span><br>
-          <span class="about__venue">City: {{ city }}</span>
         </div>
       </div>
     </div>
@@ -32,8 +30,6 @@ export default {
     return {
       title: 'About',
       content: 'GitConf is the first Git conference ever in Latin America, an entire day dedicated to learning and sharing Git, GitHub, CI, CD and automation.',
-      date: '27/06/2020',
-      city: 'Medellin, Colombia',
     };
   },
   mounted() {
@@ -48,7 +44,7 @@ export default {
 @import '../styles/typography';
 
 .about {
-  padding: 0 20px 20px 0;
+  @extend %gc-section-padding;
 
   @include from('md') {
     display: flex;
@@ -57,23 +53,20 @@ export default {
   &__content {
     @include gc-double-box($corn, $ebony, 20px);
 
+    margin-right: 20px;
     padding: 25px;
 
     @include from('md') {
       display: inline-block;
       margin-left: 100px;
       padding: 40px;
-      width: 70%;
+      width: calc(70% - 120px);
     }
 
     @include from('lg') {
       margin-left: 100px;
-      width: 50%;
+      width: calc(50% - 70px);
     }
-  }
-
-  &__date {
-    margin-top: 10px;
   }
 
   &__title {
@@ -93,11 +86,12 @@ export default {
 
     @include from('md') {
       display: inline-block;
+      vertical-align: top;
       width: 30%;
     }
 
     @include from('lg') {
-      width: 50%;
+      width: calc(50% - 50px);
     }
   }
 
