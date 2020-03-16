@@ -73,8 +73,9 @@ export default {
 .home-sponsors {
   $this: &;
 
+  @extend %gc-section-padding;
+
   background: $white;
-  padding: 90px 0;
 
   &__category {
     margin-top: 56px;

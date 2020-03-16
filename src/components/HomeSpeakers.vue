@@ -1,69 +1,40 @@
 <template>
-  <div class="home-speakers">
+  <section class="home-speakers">
     <div class="container">
-      <div class="home-speakers__content">
-        <h1 class="home-speakers__heading wow fadeIn">
-          <span class="sr-only">Confirmed speakers</span>
-          <span class="home-speakers__title"
-                data-heading="Confirmed"
-                aria-hidden="true">Confirmed</span>
-          <br>
-          <span class="home-speakers__title"
-                data-heading="/Speakers"
-                aria-hidden="true">/Speakers</span>
-        </h1>
+      <h1 class="wow fadeIn">
+        <span class="sr-only">Confirmed speakers</span>
+        <span class="home-speakers__title"
+              data-heading="Confirmed"
+              aria-hidden="true">Confirmed</span>
+        <br>
+        <span class="home-speakers__title"
+              data-heading="/Speakers"
+              aria-hidden="true">/Speakers</span>
+      </h1>
+      <div class="home-speakers__container">
         <div v-for="item in speakers"
               :key="item.name"
               class="home-speakers__item wow fadeIn">
-          <img :src="getImage(item.image)" :alt="item.name">
+          <img class="home-speakers__picture"
+            :src="getImage(item.image)"
+            :alt="item.name">
           <Cta :text="item.name" :url="item.url" :icon="'plus-square'" />
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
 import Cta from '@/components/Cta.vue';
-
+import speakers from '@/assets/data/speakers';
 import WOW from 'wow.js/dist/wow.min';
 
 export default {
   name: 'home-speakers',
   data() {
     return {
-      speakers: [
-        {
-          name: 'Test name 1',
-          image: 'speaker-fpo.png',
-          url: '#',
-        },
-        {
-          name: 'Test name 2',
-          image: 'speaker-fpo.png',
-          url: '#',
-        },
-        {
-          name: 'Test name 3',
-          image: 'speaker-fpo.png',
-          url: '#',
-        },
-        {
-          name: 'Test name 4',
-          image: 'speaker-fpo.png',
-          url: '#',
-        },
-        {
-          name: 'Test name 5',
-          image: 'speaker-fpo.png',
-          url: '#',
-        },
-        {
-          name: 'Test name 6',
-          image: 'speaker-fpo.png',
-          url: '#',
-        },
-      ],
+      speakers,
     };
   },
   components: {
@@ -87,74 +58,45 @@ export default {
 @import '../styles/typography';
 
 .home-speakers {
-  margin-bottom: 60px;
+  @extend %gc-section-padding;
 
-  @include from('md') {
-    margin-bottom: 80px;
-  }
-
-  @include from('lg') {
-    margin-bottom: 100px;
-  }
-
-  &__content {
-    text-align: center;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 45px;
 
     @include from('md') {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin: 0 -50px;
-      text-align: left;
-    }
-  }
-
-  &__heading {
-    @include from('md') {
-      margin: 0 50px 20px;
-    }
-
-    @include from('lg') {
-      margin: 0 50px;
-      // The sum of all margins is sustracted from the total width.
-      // As the header takes 2/3 spots, 100px are added.
-      width: calc((100% - 300px) / 3 * 2 + 100px);
+      justify-content: flex-start;
     }
   }
 
   &__item {
-    font-size: 0;
-    margin-top: 50px;
-    width: 100%;
+    margin-bottom: 30px;
+    max-width: 300px;
+    padding-right: 10px;
 
     @include from('md') {
-      margin: 50px 50px 0;
-      // The sum of all margins is sustracted from the total width.
-      width: calc((100% - 200px) / 2);
+      flex-basis: 50%;
     }
 
     @include from('lg') {
-      // The sum of all margins is sustracted from the total width.
-      width: calc((100% - 300px) / 3);
-
-      &:first-of-type {
-        margin-top: 0;
-      }
+      flex-basis: 33%;
     }
+  }
 
-    img {
-      border: 2px solid $corn;
-      border-bottom: none;
-      max-width: 200px;
-      width: 80%;
+  &__picture {
+    border: 2px solid $corn;
+    border-bottom: none;
+    display: block;
+    height: 380px;
+    margin: 0 auto;
+    object-fit: cover;
+    width: 80%;
 
-      @include from('md') {
-        max-width: unset;
-      }
-    }
-
-    .cta {
-      margin: auto;
+    @include from('md') {
+      margin: 0;
     }
   }
 

@@ -14,7 +14,7 @@
       <div class="home-cfp__content">
         <p>{{ description }}</p>
         <p>{{ dates }}</p>
-        <Cta :text="ctaText" :url="'#'" :icon="'plus-square'" class="home-cfp__cta"/>
+        <Cta :text="ctaText" :icon="'plus-square'" class="home-cfp__cta"/>
       </div>
     </div>
   </section>
@@ -27,8 +27,8 @@ export default {
   name: 'home-cfp',
   data() {
     return {
-      description: 'Do you have a talk idea? We\'d like to see your talk in the first version of GitConf CO, we\'d like to hear about Git, GitHub, CI, CD and automation, but also non-techical talks that could be interesting for developers who use Git.',
-      dates: 'CFP will be open from March 17th until April 17th, speakers will be notified on April 24th',
+      description: 'Do you have a talk idea? We\'d like to see your talk in the first version of GitConf CO, we\'d like to hear about Git, GitHub, CI, CD, and automation, but also no-technical talks that could be interesting for developers who use Git.',
+      dates: 'CFP will be open from March 17th to April 17th, speakers will be notified on April 24th',
       ctaText: 'Submit your talk',
     };
   },
@@ -44,20 +44,20 @@ export default {
 @import '../styles/typography';
 
 .home-cfp {
+  @extend %gc-section-padding;
 
   &__content {
     margin-top: 45px;
   }
 
   &__cta {
-    pointer-events: none;
     cursor: not-allowed;
+    filter: opacity(.5);
     margin: 50px auto 0;
   }
 
   &__title {
     @extend %gc-section-title;
-
   }
 }
 </style>
