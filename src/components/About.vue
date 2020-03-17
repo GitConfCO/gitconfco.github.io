@@ -1,7 +1,7 @@
 <template>
   <section class="about">
     <div class="container">
-      <div class="about__media">
+      <div class="about__media wow fadeIn">
         <img class="about__image--back"
               src="../assets/images/pictures/about-fpo-back.jpeg"
               alt="Terminal">
@@ -9,7 +9,7 @@
               src="../assets/images/pictures/about-fpo.jpeg"
               alt="Git">
       </div>
-      <div class="about__content">
+      <div class="about__content wow fadeIn">
         <h2 class="about__title">{{ title }}</h2>
         <div class="about__body">
           <p>
