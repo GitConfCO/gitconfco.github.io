@@ -7,6 +7,6 @@ module.exports = {
   you: {
     name: 'You?',
     image: 'person.png',
-    url: '#',
+    url: 'https://www.papercall.io/gitconfco2020',
   },
 };

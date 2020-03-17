@@ -61,8 +61,7 @@ export default {
         },
         {
           title: 'Sponsors',
-          url: '/#home-sponsors',
-          type: 'anchor',
+          url: '/sponsors',
         },
       ],
     };
@@ -96,7 +95,7 @@ export default {
   padding-top: 10px;
 
   @include from('md') {
-    height: 140px;
+    height: 160px;
     padding-top: 35px;
   }
 

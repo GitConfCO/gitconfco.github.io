@@ -26,6 +26,11 @@ const routes = [
     component: () => import('../views/Team.vue'),
   },
   {
+    path: '/sponsors',
+    name: 'sponsors',
+    component: () => import('../views/Sponsors.vue'),
+  },
+  {
     path: '/coming-soon',
     name: 'coming-soon',
     component: () => import('../views/NotFound.vue'),

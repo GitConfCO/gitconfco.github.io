@@ -19,7 +19,7 @@
         </h2>
 
         <div class="team__content">
-          <div class="team__member" v-for="item in category.team" :key="item.name">
+          <div class="team__member wow fadeIn" v-for="item in category.team" :key="item.name">
             <div class="team__member-picture">
               <img :src="getImage(category.id, item.image)"
                    :alt="item.name">
@@ -129,7 +129,10 @@ export default {
     width: 100%;
 
     img {
+      height: 100%;
+      object-fit: cover;
       position: absolute;
+      width: 100%;
     }
   }
 
