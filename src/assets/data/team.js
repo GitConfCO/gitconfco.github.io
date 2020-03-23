@@ -3,8 +3,8 @@ module.exports = {
     id: 'organizers',
     title: '/Organizers',
     team: [{
-      name: 'Manu',
-      lastname: 'Castrillon',
+      name: 'Manu Castrillon',
+      role: 'Web Engineer',
       image: 'manu.png',
       social: [{
         name: 'github',
@@ -17,8 +17,8 @@ module.exports = {
         url: 'http://www.instagram.com/manucastrillonm',
       }],
     }, {
-      name: 'Sebas',
-      lastname: 'Vargas',
+      name: 'Sebas Vargas',
+      role: 'Web Engineer',
       image: 'sebas.png',
       social: [{
         name: 'github',
@@ -28,8 +28,8 @@ module.exports = {
         url: 'https://www.instagram.com/svargaslondono/',
       }],
     }, {
-      name: 'Cami',
-      lastname: 'Gomez',
+      name: 'Cami Gomez',
+      role: 'Software Engineer',
       image: 'cami.jpeg',
       social: [{
         name: 'github',
@@ -39,19 +39,22 @@ module.exports = {
         url: 'http://www.twitter.com/camigomezdev',
       }],
     }, {
-      name: 'Karo',
-      lastname: 'Ladino',
-      image: 'karo.jpg',
+      name: 'Karo Ladino',
+      role: 'Robotics Engineer',
+      image: 'karo.jpeg',
       social: [{
         name: 'github',
         url: 'http://www.github.com/karobotco',
       }, {
         name: 'twitter',
         url: 'http://www.twitter.com/karobotco',
+      }, {
+        name: 'instagram',
+        url: 'https://instagram.com/karobot.co',
       }],
     }, {
-      name: 'Luisa F.',
-      lastname: 'Delgado',
+      name: 'Luisa F. Delgado',
+      role: 'Web Engineer',
       image: 'luisa.jpg',
       social: [{
         name: 'github',
@@ -69,28 +72,28 @@ module.exports = {
     id: 'creative',
     title: '/Creative Team/ Huge inc.',
     team: [{
-      name: 'Julian',
-      lastname: 'Rivas',
+      name: 'Julian Rivas',
+      role: 'Visual Designer',
       image: 'julian.jpg',
       social: [{
         name: 'instagram',
         url: 'https://www.instagram.com/julianx16/',
       }],
     }, {
-      name: 'Jhonatan',
-      lastname: 'Grajales',
+      name: 'Jhonatan Grajales',
+      role: 'Project Manager',
       image: 'jhonatan.png',
       social: [{
         name: 'instagram',
         url: 'https://www.instagram.com/wonderhomo/',
       }],
     }, {
-      name: 'Maria C.',
-      lastname: 'Lopez',
+      name: 'Maria C. Lopez',
+      role: 'Visual Designer',
       image: 'person.png',
     }, {
-      name: 'Daniel',
-      lastname: 'Ochoa',
+      name: 'Daniel Ochoa',
+      role: 'Visual Designer',
       image: 'person.png',
     }],
   },
@@ -105,24 +108,24 @@ module.exports = {
         url: 'https://twitter.com/octogatos',
       }],
     }, {
-      name: 'Andrea',
-      lastname: 'Griffiths',
+      name: 'Andrea Griffiths',
+      role: 'GitHub Community Support',
       image: 'andrea.png',
       social: [{
         name: 'twitter',
-        url: 'https://twitter.com/octogatos',
+        url: 'https://twitter.com/alacolombia',
       }],
     }, {
-      name: 'Alexandra',
-      lastname: 'Bourne',
+      name: 'Alexandra Bourne',
+      role: 'Project Manager',
       image: 'alexandra.jpg',
       social: [{
         name: 'twitter',
-        url: 'https://twitter.com/alexandrabourne/photo',
+        url: 'https://twitter.com/alexandrabourne',
       }],
     }, {
-      name: 'Manuel',
-      lastname: 'Briseño',
+      name: 'Manuel Briseño',
+      role: 'Enterprise Sales Manager',
       image: 'person.png',
     }],
   },

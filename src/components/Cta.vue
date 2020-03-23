@@ -1,5 +1,10 @@
 <template>
-  <a :href="url" class="cta">
+  <router-link v-if="isRouterLink" :to="url" class="cta">
+    {{ text }}
+    <i :class="`fa fa-${this.icon} cta__icon`"></i>
+  </router-link>
+
+  <a v-else :href="url" class="cta">
     {{ text }}
     <i :class="`fa fa-${this.icon} cta__icon`"></i>
   </a>
@@ -20,6 +25,10 @@ export default {
     icon: {
       type: String,
       required: true,
+    },
+    isRouterLink: {
+      type: Boolean,
+      default: false,
     },
   },
 };

@@ -1,19 +1,20 @@
 <template>
   <div class="home">
-    <HomeHero/>
-    <About/>
-    <Separator/>
-    <HomeSpeakers/>
-    <HomeCFP/>
-    <Separator/>
-    <HomeVenue/>
-    <Sponsors/>
+    <home-hero/>
+    <about/>
+    <separator/>
+    <home-speakers/>
+    <separator/>
+    <home-cfp/>
+    <separator/>
+    <home-venue/>
+    <sponsors/>
   </div>
 </template>
 
 <script>
 import About from '@/components/About.vue';
-import HomeCFP from '@/components/HomeCFP.vue';
+import HomeCfp from '@/components/HomeCFP.vue';
 import HomeHero from '@/components/HomeHero.vue';
 import HomeSpeakers from '@/components/HomeSpeakers.vue';
 import Sponsors from '@/components/Sponsors.vue';
@@ -24,7 +25,7 @@ export default {
   name: 'home',
   components: {
     About,
-    HomeCFP,
+    HomeCfp,
     HomeHero,
     HomeSpeakers,
     Sponsors,
