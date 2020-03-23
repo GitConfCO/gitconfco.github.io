@@ -14,6 +14,7 @@
       <div class="speakers__list">
         <div v-for="item in speakers"
               :key="item.name"
+              :id="item.id"
               class="speaker__item wow fadeIn">
           <div class="speaker__picture-wp">
             <img class="speaker__picture"

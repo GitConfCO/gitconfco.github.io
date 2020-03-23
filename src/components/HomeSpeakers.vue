@@ -17,15 +17,18 @@
               class="home-speakers__item wow fadeIn">
           <img class="home-speakers__picture"
             :src="getImage('speakers', item.image)"
-            :alt="item.name">
-          <cta :text="item.name" :url="item.url" :icon="'plus-square'" />
+            :alt="item.name" />
+          <cta :text="item.name"
+            :url="item.url"
+            icon="plus-square"
+            :isRouterLink="true" />
         </div>
         <div class="home-speakers__item wow fadeIn">
           <img class="home-speakers__picture"
             :src="getImage('speakers', 'person.png')"
             alt="You?">
           <cta text="You?" url="https://www.papercall.io/gitconfco2020"
-            :icon="'plus-square'" />
+            icon="plus-square" />
         </div>
       </div>
     </div>

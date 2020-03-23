@@ -18,13 +18,7 @@
       <div class="header__navigation">
         <div v-for="item in navigation"
             :key="item.title">
-            <a v-if="item.type == 'anchor'"
-              :href="item.url"
-              v-on:click="toggleNav()"
-              class="header__navigation-item">
-              {{ item.title }}
-            </a>
-            <router-link v-else
+            <router-link
               :to="item.url"
               v-on:click.native="toggleNav()"
               class="header__navigation-item">
@@ -53,7 +47,7 @@ export default {
         },
         {
           title: 'Team',
-          url: '/team',
+          url: '/team/',
         },
         {
           title: 'Schedule',
@@ -61,7 +55,7 @@ export default {
         },
         {
           title: 'Sponsors',
-          url: '/sponsors',
+          url: '#home-sponsors',
         },
       ],
     };
@@ -69,7 +63,6 @@ export default {
   methods: {
     toggleNav() {
       this.visibleNav = !this.visibleNav;
-      window.scrollTo(0, 0);
 
       if (this.visibleNav) {
         document.documentElement.style.overflow = 'hidden';

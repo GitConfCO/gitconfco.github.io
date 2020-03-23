@@ -26,20 +26,28 @@ const routes = [
     component: () => import('../views/Team.vue'),
   },
   {
-    path: '/sponsors',
-    name: 'sponsors',
-    component: () => import('../views/Sponsors.vue'),
-  },
-  {
     path: '/coming-soon',
     name: 'coming-soon',
+    component: () => import('../views/ComingSoon.vue'),
+  },
+  {
+    path: '*',
+    name: 'not-found',
     component: () => import('../views/NotFound.vue'),
   },
 ];
 
+
 const router = new VueRouter({
   base: '/',
   routes,
+  // eslint-disable-next-line no-unused-vars
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return { selector: to.hash };
+    }
+    return { x: 0, y: 0 };
+  },
 });
 
 export default router;

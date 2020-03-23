@@ -15,7 +15,7 @@
         <p>{{ description }}</p>
         <p>{{ dates }}</p>
         <Cta  :text="ctaText"
-              :icon="'plus-square'"
+              icon="plus-square"
               :url="ctaUrl"
               class="home-cfp__cta"/>
       </div>

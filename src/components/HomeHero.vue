@@ -20,7 +20,7 @@
             <li class="home-hero__venue">City: {{ city }}</li>
           </ul>
           <!-- TODO: Uncomment after adding tito -->
-          <!-- <cta :text="'Buy tickets'" :url="'#'" :icon="'level-up-alt'" /> -->
+          <!-- <cta :text="'Buy tickets'" :url="'#'" icon="level-up-alt" /> -->
         </div>
       </div>
     </div>
