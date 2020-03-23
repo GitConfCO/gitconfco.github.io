@@ -49,7 +49,7 @@ export default {
         },
         {
           title: 'Speakers',
-          url: '/coming-soon/',
+          url: '/speakers/',
         },
         {
           title: 'Team',

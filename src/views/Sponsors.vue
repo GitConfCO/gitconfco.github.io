@@ -1,6 +1,6 @@
 <template>
 <div>
-  <Sponsors/>
+  <sponsors/>
 </div>
 </template>
 

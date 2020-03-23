@@ -29,7 +29,7 @@
             :href="sponsor.url"
             class="home-sponsors__sponsor">
             <img class="home-sponsors__sponsor-image"
-                :src="getImage(category.id, sponsor.image)"
+                :src="getImage(`sponsors/${category.id}`, sponsor.image)"
                 :alt="sponsor.name">
           </a>
         </div>
@@ -39,8 +39,8 @@
 </template>
 
 <script>
+import { getImage } from '@/utils/media';
 import sponsors from '@/assets/data/sponsors';
-
 import WOW from 'wow.js/dist/wow.min';
 
 export default {
@@ -54,10 +54,7 @@ export default {
     cssClasses(category) {
       return `home-sponsors__category-list home-sponsors__category-list--${category} wow fadeIn`;
     },
-    getImage(category, image) {
-      // eslint-disable-next-line global-require, import/no-dynamic-require
-      return require(`../assets/images/sponsors/${category}/${image}`);
-    },
+    getImage,
   },
   mounted() {
     new WOW().init();

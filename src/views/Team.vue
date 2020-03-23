@@ -21,12 +21,12 @@
         <div class="team__content">
           <div class="team__member wow fadeIn" v-for="item in category.team" :key="item.name">
             <div class="team__member-picture">
-              <img :src="getImage(category.id, item.image)"
+              <img :src="getImage(`team/${category.id}`, item.image)"
                    :alt="item.name">
             </div>
             <div>
               <p class="team__member-name">{{ item.name }}</p>
-              <p v-if="item.lastname" class="team__member-lastname">{{ item.lastname }}</p>
+              <p v-if="item.role" class="team__member-role">{{ item.role }}</p>
               <div class="team__member-social">
                 <a v-for="profile in item.social"
                   :key="profile.url"
@@ -43,8 +43,8 @@
 </template>
 
 <script>
+import { getIconClasses, getImage } from '@/utils/media';
 import team from '@/assets/data/team';
-
 import WOW from 'wow.js/dist/wow.min';
 
 export default {
@@ -57,13 +57,8 @@ export default {
     new WOW().init();
   },
   methods: {
-    getImage(category, image) {
-      // eslint-disable-next-line global-require, import/no-dynamic-require
-      return require(`../assets/images/team/${category}/${image}`);
-    },
-    getIconClasses(image) {
-      return `fab fa-${image}-square`;
-    },
+    getImage,
+    getIconClasses,
   },
 };
 </script>
@@ -105,7 +100,7 @@ export default {
     }
   }
 
-  &__member-lastname {
+  &__member-role {
     @extend %gc-body4;
 
     margin-bottom: 7px;

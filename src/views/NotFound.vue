@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ComingSoon/>
+    <coming-soon/>
   </div>
 </template>
 

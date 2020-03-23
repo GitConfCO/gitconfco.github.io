@@ -16,9 +16,16 @@
               :key="item.name"
               class="home-speakers__item wow fadeIn">
           <img class="home-speakers__picture"
-            :src="getImage(item.image)"
+            :src="getImage('speakers', item.image)"
             :alt="item.name">
-          <Cta :text="item.name" :url="item.url" :icon="'plus-square'" />
+          <cta :text="item.name" :url="item.url" :icon="'plus-square'" />
+        </div>
+        <div class="home-speakers__item wow fadeIn">
+          <img class="home-speakers__picture"
+            :src="getImage('speakers', 'person.png')"
+            alt="You?">
+          <cta text="You?" url="https://www.papercall.io/gitconfco2020"
+            :icon="'plus-square'" />
         </div>
       </div>
     </div>
@@ -26,6 +33,7 @@
 </template>
 
 <script>
+import { getImage } from '@/utils/media';
 import Cta from '@/components/Cta.vue';
 import speakers from '@/assets/data/speakers';
 import WOW from 'wow.js/dist/wow.min';
@@ -41,10 +49,7 @@ export default {
     Cta,
   },
   methods: {
-    getImage(name) {
-      // eslint-disable-next-line global-require, import/no-dynamic-require
-      return require(`../assets/images/speakers/${name}`);
-    },
+    getImage,
   },
   mounted() {
     new WOW().init();
