@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: ethomson/send-tweet-action@v1
         with:
-          status: "Test desde GitHub Actions!"
+          status: "Acabamos de hacer una actualización de nuestro website, enviado desde GitHub Actions! 🔥"
           consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
           consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
           access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
