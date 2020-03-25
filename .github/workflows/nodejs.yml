@@ -17,7 +17,7 @@ jobs:
         node-version: [10.x, 12.x]
 
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -27,12 +27,15 @@ jobs:
         npm run build
         mv ./docs/CNAME ./dist/
         rm -rf ./docs
-        mv ./dist ./docs
+        mv ./dist ./docs         
+    - uses: actions/checkout@master
+    - name: Commit files
+      run: |
         git add .
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Actio
         git commit -m "Update build files"
-        git push origin master  
+        git push origin master
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
