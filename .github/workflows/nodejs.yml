@@ -33,7 +33,7 @@ jobs:
       run: |
         git add .
         git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Actio
+        git config --local user.name "GitHub Action"
         git commit -m "Update build files"
         git push origin master
     - name: Push changes
