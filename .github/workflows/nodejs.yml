@@ -29,5 +29,8 @@ jobs:
     - run: mv ./docs/CNAME ./dist/
     - run: rm -rf ./docs
     - run: mv ./dist ./docs
+    - run: git add .
+    - run: git commit -m "Update build files"
+    - run: git push origin master  
       env:
         CI: true
