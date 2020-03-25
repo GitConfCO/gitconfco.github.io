@@ -6,8 +6,6 @@ name: Node.js CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
@@ -19,18 +17,24 @@ jobs:
         node-version: [10.x, 12.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@master
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build
-    - run: mv ./docs/CNAME ./dist/
-    - run: rm -rf ./docs
-    - run: mv ./dist ./docs
-    - run: git add .
-    - run: git commit -m "Update build files"
-    - run: git push origin master  
-      env:
-        CI: true
+    - run: |
+        npm ci
+        npm run build
+        mv ./docs/CNAME ./dist/
+        rm -rf ./docs
+        mv ./dist ./docs
+        git add .
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Actio
+        git commit -m "Update build files"
+        git push origin master  
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
