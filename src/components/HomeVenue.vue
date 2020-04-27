@@ -3,10 +3,10 @@
     <div class="container">
       <div class="home-venue__content wow fadeIn">
         <div class="home-venue__title-container">
-          <h1 class="home-venue__title" data-heading="Venue">Venue</h1>
+          <h2 class="home-venue__title" data-heading="Venue">Venue</h2>
         </div>
         <div class="home-venue__details">
-          <h2 class="home-venue__name">{{ name }}</h2>
+          <h3 class="home-venue__name">{{ name }}</h3>
           <p class="home-venue__description">{{ description }}</p>
           <p class="home-venue__description">{{ address }}</p>
         </div>

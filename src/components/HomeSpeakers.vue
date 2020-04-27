@@ -1,7 +1,7 @@
 <template>
   <section class="home-speakers">
     <div class="container">
-      <h1 class="wow fadeIn">
+      <h2 class="wow fadeIn">
         <span class="sr-only">Confirmed speakers</span>
         <span class="home-speakers__title"
               data-heading="Confirmed"
@@ -10,7 +10,7 @@
         <span class="home-speakers__title"
               data-heading="/Speakers"
               aria-hidden="true">/Speakers</span>
-      </h1>
+      </h2>
       <div class="home-speakers__container">
         <div v-for="item in speakers"
               :key="item.name"
