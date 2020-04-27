@@ -4,14 +4,14 @@
       <div class="home-hero__content">
         <h1 class="wow fadeIn home-hero__heading">
           <span class="home-hero__heading-box"></span>
-          <span class="sr-only">GitConf CO 2020</span>
+          <span class="sr-only">GitConf CO 2021</span>
           <span class="home-hero__title"
                 data-heading="GitConf"
                 aria-hidden="true">GitConf</span>
           <br>
           <span class="home-hero__title"
-                data-heading="/CO.2020"
-                aria-hidden="true">/CO.2020</span>
+                data-heading="/CO.202?"
+                aria-hidden="true">/CO.202?</span>
         </h1>
         <div class="home-hero__info wow fadeIn">
           <ul class="home-hero__details">
@@ -19,8 +19,6 @@
             <li class="home-hero__date">Date: {{ date }}</li>
             <li class="home-hero__venue">City: {{ city }}</li>
           </ul>
-          <!-- TODO: Uncomment after adding tito -->
-          <!-- <cta :text="'Buy tickets'" :url="'#'" icon="level-up-alt" /> -->
         </div>
       </div>
     </div>
@@ -28,9 +26,6 @@
 </template>
 
 <script>
-// TODO: Uncomment after adding tito
-// import Cta from '@/components/Cta.vue';
-
 import WOW from 'wow.js/dist/wow.min';
 
 export default {
@@ -38,13 +33,9 @@ export default {
   data() {
     return {
       conferenceName: 'GitConf Colombia',
-      date: '27/06/2020',
+      date: 'TBD',
       city: 'Medellin',
     };
-  },
-  components: {
-    // TODO: Uncomment after adding tito
-    // Cta,
   },
   mounted() {
     new WOW().init();
@@ -120,6 +111,7 @@ export default {
 
   &__details {
     margin-top: 40px;
+    padding-bottom: 30px;
     text-align: right;
 
     @include from('lg') {
