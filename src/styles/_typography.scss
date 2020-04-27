@@ -80,6 +80,31 @@
   }
 }
 
+%gc-section-title-small {
+  @include gc-double-text($corn, 8px);
+
+  color: $corn;
+  font: 700 30px $roboto;
+  letter-spacing: 2px;
+  line-height: 40px;
+
+  @include from('md') {
+    @include gc-double-text($corn, 15px);
+
+    font-size: 60px;
+    letter-spacing: 2.2px;
+    line-height: 60px;
+  }
+
+  @include from('lg') {
+    @include gc-double-text($corn, 20px);
+
+    font-size: 70px;
+    letter-spacing: 2.4px;
+    line-height: 70px;
+  }
+}
+
 %gc-subsection-title {
   @include gc-double-text($corn, 6px);
 

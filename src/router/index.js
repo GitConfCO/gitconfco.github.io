@@ -11,14 +11,14 @@ const routes = [
     component: Home,
   },
   {
+    path: '/covid-19',
+    name: 'covid-19',
+    component: () => import('../views/Covid-19.vue'),
+  },
+  {
     path: '/speakers',
     name: 'speakers',
     component: () => import('../views/Speakers.vue'),
-  },
-  {
-    path: '/schedule',
-    name: 'schedule',
-    component: () => import('../views/Schedule.vue'),
   },
   {
     path: '/team',

@@ -50,12 +50,8 @@ export default {
           url: '/team/',
         },
         {
-          title: 'Schedule',
-          url: '/coming-soon/',
-        },
-        {
           title: 'Sponsors',
-          url: '#home-sponsors',
+          url: '/#home-sponsors',
         },
       ],
     };
